@@ -1,0 +1,40 @@
+{
+  "name": "envarify",
+  "description": "A convenience utility to verify all required node environment variables are set.",
+  "version": "0.9.1",
+  "main": "build/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "2.3.0",
+    "lodash.findindex": "4.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchemiio/envarify.git"
+  },
+  "scripts": {
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest",
+    "prepublish": "npm run build",
+    "release": "np"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-latest": "6.24.1",
+    "jest": "21.2.1",
+    "np": "2.18.1",
+    "watch": "1.0.2"
+  },
+  "keywords": [
+    "environmental",
+    "variables",
+    "verify",
+    "validate"
+  ]
+}

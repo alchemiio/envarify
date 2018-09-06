@@ -4,9 +4,9 @@
 
 Envarify is a simple utility to verify that all required node environmental variables required for an application to run are defined in the application's current environment.
 
-This utility will compare variable keys passed into it, with the variables defined in the application's node environment, logging out the status of each variable. If any of the required environmental variables are not defined the application will be terminated early.
+Undefined environmental variables may not be verified until they are invoked at runtime and may not be immediately apparent to the developer, leading to unexpected crashes or errors. Envarify was created to assist mitigate runtime errors in larger node projects that may rely on many environmental variables. This tool is especially suitable for applications that may be deployed in many different environments during its development cycle.
 
-This tool was created to assist mitigate runtime errors in larger node projects that may rely on many environmental variables. Undefined environmental variables may not be verified until they are invoked at runtime and so they may not be immediately apparent to the developer. This tool is especially suitable for applications that may be deployed in many different environments during its development cycle.
+Envarify will compare variable keys it is configured with, against the variables defined in the application's node environment, logging out the status of each variable. If any of the required environmental variables are not defined the application will be terminated early. Envarify will also alert user of missing optional environmental variables.
 
 
 
